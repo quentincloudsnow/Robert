@@ -47,7 +47,7 @@ Before opening RPA Desktop Design Studio, let's look at RPA Hub and some of the 
    | Shared Parameters | Global variables or configurable items that are stored in one place. These variables and terms are used across bot processes. |
    | Queues | Repository that can hold an unlimited number of work queue items that can be processed by a robot.
    | Robots | Software agent that runs a bot process that is built in the RPA Desktop Design Studio. |
-   | Installed RPA Plugins | The installed software components that add specific features for an interaction with third- party applications such as Microsoft Office 365Google Chrome, Windows, and so on. |
+   | Installed RPA Plugins | The installed software components that add specific features for an interaction with third- party applications such as Microsoft Office 365, Google Chrome, Windows, and so on. |
    | Alerts | Custom notifications that are generated for robots, schedules, process jobs, and other RPA Hub-related tables. |
    | Process Jobs | Execution of a process on a robot. |
    
@@ -87,7 +87,9 @@ Before opening RPA Desktop Design Studio, let's look at RPA Hub and some of the 
 
 ## Connecting to the lab VM
 
-A Windows Virtual Machine (VM) will be needed to complete this lab. The IP address and login credentials were provided when registering for the lab. If using a Mac laptop, the Microsoft Remote Desktop App should have already been installed as a pre-requisite to this lab. 
+A Windows Virtual Machine (VM) will be needed to complete this lab. The IP address, hostname and login credentials were provided when registering for the lab. 
+
+When using a Windows machine skip to step 6. If using a Mac laptop, the Microsoft Remote Desktop App should have already been installed as a pre-requisite to this lab. 
 
  1. If using a Mac, connect to the lab VM by opening Microsoft Remote Desktop and clicking on the **plus sign** and then clicking **Add PC**. If using a Windows laptop, skip to **Step 6** to connect to the VM using Windows RDP.
 
@@ -99,6 +101,7 @@ A Windows Virtual Machine (VM) will be needed to complete this lab. The IP addre
 
     ![Relative](images/RPA-Images/Add-PC-Name-2.png)
     > The **IP Address** is only the value within the **[]** brackets on the Windows Server line.
+    > When the **IP Address** doesn't work, try the **hostname** instead.
 
  1. Double click on the new VM that was added to RDP.
 
@@ -122,6 +125,7 @@ A Windows Virtual Machine (VM) will be needed to complete this lab. The IP addre
 
     ![Relative](images/RPA-Images/Windows-RDP.png)
     > The **IP Address** is only the value within the **[]** brackets on the Windows Server line.
+    > When the **IP Address** doesn't work, try the **hostname** instead.
 
  1. Click **More choices**.
 
@@ -322,7 +326,7 @@ The goal of this exercise is to design an automation that enters data into a leg
 
     ![Relative](images/RPA-Images/Click-Configure2.gif)
 
- 1. Click the drop-down window and check to see which applications are available. The PayDay App is not included because it has not yet been opened. 
+ 1. Click the drop-down window and check to see which applications are available. If the PayDay App is already  included you can skip the next step.
 
     ![Relative](images/RPA-Images/Check-Windows.png)
 
@@ -473,7 +477,7 @@ The goal of this exercise is to design an automation that enters data into a leg
 
     ![Relative](images/RPA-Images/Enter-Flow-Name.png) 
 
- 1. Paste **”global.update\_hr\_sync_field”** into the name field and press **Enter**. This value is the internal name of the SubFlow that needs to be invoked. It includes “global.” in front of the internal name to indicate which application scope it is in. The value should be spelled exactly as shown in the image below or the SubFlow will not be triggered.
+ 1. Enter **”global.update\_hr\_sync_field”** into the name field and press **Enter**. This value is the internal name of the SubFlow that needs to be invoked. It includes “global.” in front of the internal name to indicate which application scope it is in. The value should be spelled exactly as shown in the image below or the SubFlow will not be triggered.
 
     ![Relative](images/RPA-Images/Enter-Flow-Name-2.png)
 
@@ -497,7 +501,7 @@ The goal of this exercise is to design an automation that enters data into a leg
 
     ![Relative](images/RPA-Images/Results2.png)
 
- 1. Once complete, the automation can be run by clicking **Run** on the left side of the Toolbar. 
+ 1. Once complete, the automation can be run by clicking **Run** on the left side of the Toolbar. If the **Run** button is disabled (gray), first click **Clear log**, to clear any old run results which enables the **Run** button.
 
     ![Relative](images/RPA-Images/Click-Run2.png)
 
@@ -561,7 +565,7 @@ Now that the automation is complete, a bot process needs to be created so the bo
 
     ![Relative](images/RPA-Images/Click-New-Robot.png)
 
- 1. Type **Lab Robot** under Name (1), type the **lab VM machine name** under Machine Name (2), and click **Save** (3). The machine name or hostname can be found on the lab VM desktop background. It can also be found on the lab instance by clicking **Favorites** (1) and then clicking **MID Servers** (2) The machine name is desplayed on the resulting page under **Host name** (3), as seen in the second and third images below.
+ 1. Type **Lab Robot** under Name (1), type the **lab VM machine name** under Machine Name (2), and click **Save** (3). The machine name or hostname can be found on the lab VM desktop background. It can also be found on the lab instance by clicking **Favorites** (1) and then clicking **MID Servers** (2) The machine name is displayed on the resulting page under **Host name** (3), as seen in the second and third images below.
 
     ![Relative](images/RPA-Images/Create-Robot.png)
 
